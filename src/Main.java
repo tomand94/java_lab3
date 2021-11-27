@@ -14,5 +14,48 @@ public class Main {
             c) wyświetlić dane z tablicy, użyć pętli for lub forEach
             d) dane powinny być estetycznie przedstawione
          */
+
+        List<Student> studenci = new ArrayList<>();
+
+        Student stud1 = new Student();
+        stud1.imie = "Adam";
+        stud1.nazwisko = "Kowalski";
+        stud1.wiek = 23;
+        stud1.pelnoletni = true;
+
+        Student stud2 = new Student();
+        stud2.imie = "Magda";
+        stud2.nazwisko = "Nowak";
+        stud2.wiek = 17;
+        stud2.pelnoletni = false;
+
+        Student stud3 = new Student();
+        stud3.imie = "Janusz";
+        stud3.nazwisko = "Tracz";
+        stud3.wiek = 66;
+        stud3.pelnoletni = true;
+
+        studenci.add(stud1);
+        studenci.add(stud2);
+        studenci.add(stud3);
+
+        for (Student item: studenci) {
+            System.out.println("Imię: " + item.imie);
+            System.out.println("Nazwisko: " + item.nazwisko);
+            System.out.println("Wiek: " + item.wiek);
+            if (item.pelnoletni = true) {
+            System.out.println("Pelnoletni: tak\n");
+            }   else {
+                System.out.println("Pelnoletni: nie\n");
+            }
+
+        }
     }
+}
+
+class Student {
+    String imie;
+    String nazwisko;
+    int wiek;
+    boolean pelnoletni;
 }
