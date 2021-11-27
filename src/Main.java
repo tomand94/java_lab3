@@ -1,3 +1,7 @@
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -27,6 +31,24 @@ public class Main {
             b) dodać studentów do Listy ArrayList,
             c) przeiterować listę za pomocą pętli forEach wywołując na każdym objekcie metodę toString() (w każdej iteracji);
          */
+
+        Osoba osoba1 = new Osoba("Tomek", "Kowalski", 123);
+        Student student1 = new Student(osoba1, EnumTest.WydzialEnum.INFORMATYKA);
+        Student student2 = new Student(osoba1, EnumTest.WydzialEnum.BUDOWNICTWO);
+        Student student3 = new Student(osoba1, EnumTest.WydzialEnum.EKONOMIA);
+        Student student4 = new Student(osoba1, EnumTest.WydzialEnum.ELEKTRONIKA);
+        Student student5 = new Student(osoba1, EnumTest.WydzialEnum.MECHANIKA);
+
+        List<Student> lista = new ArrayList<>();
+        lista.add(student1);
+        lista.add(student2);
+        lista.add(student3);
+        lista.add(student4);
+        lista.add(student5);
+
+        for (Student item: lista) {
+            System.out.println(item);
+        }
 
     }
 }
