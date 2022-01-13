@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,6 +16,26 @@ public class Main {
             e) w klasie Main proszę stworzyć objekty podobnie jak w przykładzie 5,
             oraz stworzyć listę typu najbardziej generycznego np. List<Budynek>
          */
+
+        Notebook notebook1 = new Notebook(40, 8192, 4500);
+        notebook1.coolDown();
+        Notebook notebook2 = new Notebook(30, 8192, 5500);
+        Notebook notebook3 = new Notebook(60, 8192, 4500);
+        Notebook notebook4 = new Notebook(55, 8192, 7500);
+        Notebook notebook5 = new Notebook(40, 8192, 4300);
+
+
+        List<Notebook> lista = new ArrayList<>();
+        lista.add(notebook1);
+        lista.add(notebook2);
+        lista.add(notebook3);
+        lista.add(notebook4);
+        lista.add(notebook5);
+
+        for (Notebook item: lista) {
+            System.out.println(item);
+        }
+
 
     }
 }
